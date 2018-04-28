@@ -77,7 +77,7 @@ class GroovyShellCommand implements Command, SessionAware {
 		TtyFilterOutputStream err = new TtyFilterOutputStream(this.err);
 
 		IO io = new IO(in, out, err);
-		io.setVerbosity(IO.Verbosity.DEBUG);
+		io.setVerbosity(IO.Verbosity.INFO); // lpt changed from DEBUG to INFO
 		final Groovysh shell = new Groovysh(createBinding(bindings, out, err), io);
 		shell.setErrorHook(new Closure(this) {
 			@Override
