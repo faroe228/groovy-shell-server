@@ -1,0 +1,31 @@
+/*
+
+# fetch my version GroovyShellCommand.java into src/main/java...
+
+mkdir -p  src/main/java/me/bazhenov/groovysh && \
+wget -qO- https://raw.githubusercontent.com/faroe228/groovy-shell-server/master/groovy-shell-server/\
+src/main/java/me/bazhenov/groovysh/GroovyShellCommand.java > \
+src/main/java/me/bazhenov/groovysh/GroovyShellCommand.java
+
+*/
+
+apply plugin: 'java'
+
+apply plugin: 'application'
+
+mainClassName = 'groovy.ui.GroovyMain'
+
+compileJava   {
+	sourceCompatibility = '1.8'
+	targetCompatibility = '1.8'
+}
+
+repositories {
+	mavenCentral();
+}
+
+dependencies {
+	// https://mvnrepository.com/artifact/me.bazhenov.groovy-shell/groovy-shell-server
+    compile group: 'me.bazhenov.groovy-shell', name: 'groovy-shell-server', version: '1.7.2'
+}
+

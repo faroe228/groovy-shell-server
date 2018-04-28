@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+rm -r '.gradle' 2> /dev/null
+rm -r build     2> /dev/null
+rm -r target    2> /dev/null
+rm -r out       2> /dev/null
+
+# clean junk files
+find . |grep '~$' |xargs -n 1 rm 2> /dev/null
+find . |grep '#$' |xargs -n 1 rm 2> /dev/null

@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+# assumes gradle installDist
+build/install/alt-groovy-shell-server-1.7.2/bin/alt-groovy-shell-server-1.7.2 "$@"
